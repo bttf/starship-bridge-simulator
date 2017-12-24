@@ -19,7 +19,14 @@ module.exports = {
       test: /\.s?css$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: ['css-loader', 'sass-loader']
+        use: [{
+          loader: 'css-loader',
+        }, {
+          loader: 'sass-loader',
+          options: {
+            includePaths: [path.resolve(__dirname, 'src/styles')],
+          },
+        }],
       }),
     }, {
       test: /\.(jpe?g|png|gif|svg)$/i,
