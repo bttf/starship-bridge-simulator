@@ -1,3 +1,6 @@
 import './index.scss';
 
-console.log('hooray');
+window.onload = () => {
+  const loadingIndicator = document.getElementsByClassName('loading-indicator')[0];
+  loadingIndicator.remove();
+};
