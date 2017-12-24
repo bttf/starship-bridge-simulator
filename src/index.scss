@@ -2,3 +2,27 @@ html,
 body {
   font-size: 100%;
 }
+
+noscript {
+  .quote {
+    font-size: 2rem;
+  }
+
+  .portfolio {
+    display: flex;
+
+    .portrait {
+      flex: 1;
+      max-width: 200px;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .info {
+      flex: 1;
+    }
+  }
+}
