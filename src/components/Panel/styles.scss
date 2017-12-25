@@ -1,5 +1,64 @@
+$veilSize: 4px;
+
 .panel {
+  position: relative;
+
   border: 1px solid #B9FF62;
+
   height: 100%;
   width: 100%;
+
+  .veil {
+    background-color: #000;
+    position: absolute;
+    transition: all .5s;
+
+    &.veil-top {
+      top: -$veilSize;
+      right: -$veilSize;
+      left: -$veilSize;
+
+      height: $veilSize;
+
+      &.hidden {
+        left: 110%;
+      }
+    }
+
+    &.veil-right {
+      top: -$veilSize;
+      right: -$veilSize;
+      bottom: -$veilSize;
+
+      width: $veilSize;
+
+      &.hidden {
+        top: 110%;
+      }
+    }
+
+    &.veil-bottom {
+      right: -$veilSize;
+      bottom: -$veilSize;
+      left: -$veilSize;
+
+      height: $veilSize;
+
+      &.hidden {
+        left: 110%;
+      }
+    }
+
+    &.veil-left {
+      top: -$veilSize;
+      bottom: -$veilSize;
+      left: -$veilSize;
+
+      width: $veilSize;
+
+      &.hidden {
+        top: 110%;
+      }
+    }
+  }
 }
