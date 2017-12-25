@@ -13,6 +13,11 @@ $veilSize: 4px;
 
     height: 100%;
     width: 100%;
+
+    .content {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .veil {
@@ -74,6 +79,15 @@ $veilSize: 4px;
     font-size: 0.7rem;
     transition: opacity .5s;
     text-align: right;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  .content {
+    opacity: 0;
+    transition: opacity .5s;
 
     &.visible {
       opacity: 1;

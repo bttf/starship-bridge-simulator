@@ -41,11 +41,13 @@ export default class Panel extends React.PureComponent<PanelProps, {}> {
     }, unveilTimeout);
 
     /**
-     * add classname to title element after slight delay
+     * add classname to title and content elements after slight delay
      */
     setTimeout(() => {
       const title = this.refs.title;
+      const content = this.refs.content;
       title.className = title.className.concat(' visible');
+      content.className = content.className.concat(' visible');
     }, unveilTimeout + 550);
   }
 
@@ -55,6 +57,7 @@ export default class Panel extends React.PureComponent<PanelProps, {}> {
     return (
       <div className="panel-container" ref="container">
         <div className="panel">
+          <div className="content" ref="content" {...this.props}></div>
           <div className="veil veil-top" ref="veilTop"></div>
           <div className="veil veil-right" ref="veilRight"></div>
           <div className="veil veil-bottom" ref="veilBottom"></div>
