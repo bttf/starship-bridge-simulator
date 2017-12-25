@@ -1,12 +1,19 @@
+@import 'colors';
+
 $veilSize: 4px;
 
-.panel {
-  position: relative;
-
-  border: 1px solid #B9FF62;
-
+.panel-container {
   height: 100%;
   width: 100%;
+
+  .panel {
+    position: relative;
+
+    border: 1px solid #B9FF62;
+
+    height: 100%;
+    width: 100%;
+  }
 
   .veil {
     background-color: #000;
@@ -59,6 +66,17 @@ $veilSize: 4px;
       &.hidden {
         top: 110%;
       }
+    }
+  }
+
+  .title-element {
+    opacity: 0;
+    font-size: 0.7rem;
+    transition: opacity .5s;
+    text-align: right;
+
+    &.visible {
+      opacity: 1;
     }
   }
 }

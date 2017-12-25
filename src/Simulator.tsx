@@ -6,18 +6,21 @@ export default class Simulator extends React.Component {
   render() {
     return (
       <div className="top-row">
+        <div className="title">
+          Starbridge Simulator v1
+        </div>
         <div className="viewscreen">
-          <Panel />
+          <Panel title="ViewScreen" />
         </div>
         <div className="warp-indicator">
-          <Panel />
+          <Panel title="Warp Indicator" />
         </div>
         <div className="destination-and-comms">
           <div className="destination">
-            <Panel />
+            <Panel title="Destination" />
           </div>
           <div className="communications">
-            <Panel />
+            <Panel title="Communications" />
           </div>
         </div>
       </div>
