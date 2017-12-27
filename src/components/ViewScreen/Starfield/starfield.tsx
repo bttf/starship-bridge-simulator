@@ -74,7 +74,12 @@ export default class Starfield {
                 this.starSpeed += 0.1;
             }
             else if (this.starSpeed > this.targetSpeed + 0.1) {
-                this.starSpeed -= 0.1;
+                // more gradual slowdown from qt. impulse to full stop
+                if (this.targetSpeed === 0 && this.starSpeed <= .5) {
+                    this.starSpeed -= 0.01;
+                } else {
+                    this.starSpeed -= 0.1;
+                }
             }
 
             if (this.targetSpeed === 0 && this.starSpeed < 0.1) {

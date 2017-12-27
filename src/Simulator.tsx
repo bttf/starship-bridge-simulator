@@ -14,26 +14,25 @@ export default class Simulator extends React.PureComponent<{}, SimulatorState> {
   constructor(props: {}) {
     super(props);
 
-    // get 2nd to last speed (quarter impulse)
+    // start simulator at quater impulse speed
     const targetWarpSpeed = WarpSpeeds.slice(-2)[0];
-
     this.state = {
       targetWarpSpeed,
       currentWarpSpeedVelocity: targetWarpSpeed.velocity,
     };
 
-    this.setCurrentWarpSpeedVelocity = this.setCurrentWarpSpeedVelocity.bind(this);
     this.setTargetWarpSpeed = this.setTargetWarpSpeed.bind(this);
+    this.setCurrentWarpSpeedVelocity = this.setCurrentWarpSpeedVelocity.bind(this);
+  }
+
+  setTargetWarpSpeed(warpSpeed: IWarpSpeed) {
+    this.setState({ targetWarpSpeed: warpSpeed });
   }
 
   setCurrentWarpSpeedVelocity(velocity: number) {
     this.setState({
       currentWarpSpeedVelocity: velocity,
     });
-  }
-
-  setTargetWarpSpeed(warpSpeed: IWarpSpeed) {
-    this.setState({ targetWarpSpeed: warpSpeed });
   }
 
   render() {
@@ -44,8 +43,8 @@ export default class Simulator extends React.PureComponent<{}, SimulatorState> {
         </div>
 
         <ViewScreen
-          currentWarpSpeedVelocity={this.state.currentWarpSpeedVelocity}
           targetWarpSpeed={this.state.targetWarpSpeed}
+          currentWarpSpeedVelocity={this.state.currentWarpSpeedVelocity}
           setCurrentWarpSpeedVelocity={this.setCurrentWarpSpeedVelocity}
         />
 
