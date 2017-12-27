@@ -5,7 +5,11 @@ export interface PanelProps {
   title?: string;
 }
 
-export default class Panel extends React.PureComponent<PanelProps, {}> {
+export interface PanelState {
+  showContent: boolean;
+}
+
+export default class Panel extends React.PureComponent<PanelProps, PanelState> {
   refs: {
     [key: string]: (Element);
     veilTop: (HTMLDivElement);
@@ -16,7 +20,19 @@ export default class Panel extends React.PureComponent<PanelProps, {}> {
     container: (HTMLDivElement);
   };
 
+  constructor(props: PanelProps) {
+    super(props);
+
+    this.state = {
+      showContent: false,
+    };
+  }
+
   componentDidMount() {
+    /**
+     * calculate unveilTimeout based on x-y position; panels appear successively
+     * from left to right
+     */
     const panelOffsetLeft = this.refs.container.offsetLeft;
     const fullWidthRatio = panelOffsetLeft / window.innerWidth;
     const maxTimeout = 500;
@@ -41,11 +57,15 @@ export default class Panel extends React.PureComponent<PanelProps, {}> {
     }, unveilTimeout);
 
     /**
-     * add classname to title and content elements after slight delay
+     * insert content div into DOM after unveiling and make title and content
+     * visible after delay
      */
     setTimeout(() => {
+      this.setState({ showContent: true });
+
       const title = this.refs.title;
       const content = this.refs.content;
+
       title.className = title.className.concat(' visible');
       content.className = content.className.concat(' visible');
     }, unveilTimeout + 550);
@@ -57,7 +77,7 @@ export default class Panel extends React.PureComponent<PanelProps, {}> {
     return (
       <div className="panel-container" ref="container">
         <div className="panel">
-          <div className="content" ref="content" {...this.props}></div>
+          {this.state.showContent ? (<div className="content" ref="content" {...this.props}></div>) : null}
           <div className="veil veil-top" ref="veilTop"></div>
           <div className="veil veil-right" ref="veilRight"></div>
           <div className="veil veil-bottom" ref="veilBottom"></div>

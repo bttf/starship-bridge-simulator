@@ -4,6 +4,10 @@
     "module": "commonjs",
     "sourceMap": true,
     "jsx": "react",
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "starbridge/*": ["src/*"]
+    }
   }
 }

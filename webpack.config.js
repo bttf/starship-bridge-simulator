@@ -49,6 +49,9 @@ module.exports = {
     ]),
   ],
   resolve: {
+    alias: {
+      starbridge: (path.resolve(__dirname, 'src')),
+    },
     extensions: ['.tsx', '.ts', '.js'],
   },
   devServer: {

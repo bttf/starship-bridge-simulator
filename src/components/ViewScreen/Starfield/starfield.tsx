@@ -70,7 +70,7 @@ export default class Starfield {
         }
 
         for (var i = 0; i < this.transitionSpeed; i++) {
-            if (this.starSpeed < this.targetSpeed - 0.1) {
+            if (this.starSpeed < this.targetSpeed) {
                 this.starSpeed += 0.1;
             }
             else if (this.starSpeed > this.targetSpeed + 0.1) {
