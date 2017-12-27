@@ -7,6 +7,12 @@
     transform: translateY(-1rem) scale(1.2, 1.2) skew(-12deg);
     transition: all .5s;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.8rem;
+
     &.visible {
         opacity: 1;
         transform: translateY(0) scale(1, 1) skew(-12deg);

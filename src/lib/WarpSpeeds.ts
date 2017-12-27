@@ -30,6 +30,6 @@ export default [
     new WarpSpeed({ velocity: 8, label: 'Warp 1'}),
     new WarpSpeed({ velocity: 2, label: 'Full Impulse'}),
     new WarpSpeed({ velocity: 1, label: 'Half Impulse'}),
-    new WarpSpeed({ velocity: .5, label: 'Quarter Impulse'}),
+    new WarpSpeed({ velocity: .5, label: 'Qt. Impulse'}),
     new WarpSpeed({ velocity: 0, label: 'Full Stop'}),
 ];

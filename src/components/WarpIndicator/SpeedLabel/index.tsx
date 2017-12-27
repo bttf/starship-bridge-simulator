@@ -66,7 +66,7 @@ export default class SpeedLabel extends React.PureComponent<SpeedLabelProps, Spe
         };
 
         return (
-            <div className={`speed-label ${this.props.warpSpeed.slug}`} style={style} ref="label" onClick={this.onClick.bind(this)}></div>
+            <div className={`speed-label ${this.props.warpSpeed.slug}`} style={style} ref="label" onClick={this.onClick.bind(this)}>{this.props.warpSpeed.label}</div>
         )
     }
 }
