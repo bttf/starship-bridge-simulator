@@ -1,6 +1,6 @@
 .simulator {
     display: grid;
-    grid: repeat(10, [row] 1fr) / repeat(10, [col] 1fr);
+    grid: repeat(10, [row] 1fr) / repeat(12, [col] 1fr);
 
     min-height: 90vh;
 
@@ -13,14 +13,14 @@
     }
 
     .destination {
-        grid-area: row 1 / col 9 / span 1 / span 2;
+        grid-area: row 1 / col 9 / span 1 / span 4;
     }
 
     .communications {
-        grid-area: row 2 / col 9 / span 5 / span 2;
+        grid-area: row 2 / col 9 / span 5 / span 4;
     }
 
     .information {
-        grid-area: row 7 / col 1 / span 4 / span 10;
+        grid-area: row 7 / col 1 / span 4 / span 12;
     }
 }
