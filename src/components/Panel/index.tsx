@@ -72,7 +72,7 @@ export default class Panel extends React.PureComponent<PanelProps, PanelState> {
   }
 
   render() {
-    const titleElement = <div className="title-element" ref="title">{this.props.title}</div>;
+    const titleElement = <div className="title" ref="title">{this.props.title}</div>;
 
     return (
       <div className="panel-container" ref="container">

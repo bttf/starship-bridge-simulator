@@ -2,6 +2,7 @@ import * as React from 'react';
 import Panel from '../Panel';
 import Starfield from './Starfield';
 import { IWarpSpeed } from 'starbridge/lib/WarpSpeeds';
+import './styles.scss';
 
 interface ViewScreenProps {
     currentWarpSpeedVelocity: number;

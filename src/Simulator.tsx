@@ -37,11 +37,7 @@ export default class Simulator extends React.PureComponent<{}, SimulatorState> {
 
   render() {
     return (
-      <div className="top-row">
-        <div className="title">
-          Starbridge Simulator v1
-        </div>
-
+      <div className="simulator">
         <ViewScreen
           targetWarpSpeed={this.state.targetWarpSpeed}
           currentWarpSpeedVelocity={this.state.currentWarpSpeedVelocity}
@@ -54,13 +50,16 @@ export default class Simulator extends React.PureComponent<{}, SimulatorState> {
           setTargetWarpSpeed={this.setTargetWarpSpeed}
         />
 
-        <div className="destination-and-comms">
-          <div className="destination">
-            <Panel title="Destination" />
-          </div>
-          <div className="communications">
-            <Panel title="Communications" />
-          </div>
+        <div className="destination">
+          <Panel title="Destination" />
+        </div>
+
+        <div className="communications">
+          <Panel title="Communications" />
+        </div>
+
+        <div className="information">
+          <Panel title="Information" />
         </div>
       </div>
     );
