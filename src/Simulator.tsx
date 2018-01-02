@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ViewScreen from './components/ViewScreen';
 import WarpIndicator from './components/WarpIndicator';
+import Information from './components/Information';
 import Panel from './components/Panel';
 import WarpSpeeds, { IWarpSpeed } from 'starbridge/lib/WarpSpeeds';
 import './Simulator.scss';
@@ -58,9 +59,7 @@ export default class Simulator extends React.PureComponent<{}, SimulatorState> {
           <Panel title="Communications" />
         </div>
 
-        <div className="information">
-          <Panel title="Information" />
-        </div>
+        <Information />
       </div>
     );
   }

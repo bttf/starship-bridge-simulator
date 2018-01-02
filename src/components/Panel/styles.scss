@@ -14,7 +14,7 @@ $veilSize: 4px;
 
     position: relative;
 
-    border: 1px solid #B9FF62;
+    border: 1px solid $green;
     box-sizing: border-box;
 
     .content {
@@ -85,6 +85,9 @@ $veilSize: 4px;
     font-size: 0.7rem;
     transition: opacity .5s;
     text-align: right;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     &.visible {
       opacity: 1;
