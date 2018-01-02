@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Panel from '../Panel';
+import Panel from 'components/Panel';
 import SpeedLabel from './SpeedLabel';
-import WarpSpeeds, { IWarpSpeed } from 'starbridge/lib/WarpSpeeds';
+import WarpSpeeds, { IWarpSpeed } from 'lib/WarpSpeeds';
 import './styles.scss';
 
 interface WarpIndicatorProps {

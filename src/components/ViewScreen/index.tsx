@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Panel from '../Panel';
+import Panel from 'components/Panel';
 import Starfield from './Starfield';
-import { IWarpSpeed } from 'starbridge/lib/WarpSpeeds';
+import { IWarpSpeed } from 'lib/WarpSpeeds';
 import './styles.scss';
 
 interface ViewScreenProps {

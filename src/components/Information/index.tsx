@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Panel from '../Panel';
+import Panel from 'components/Panel';
 import './styles.scss';
 
 export default class Information extends React.PureComponent {

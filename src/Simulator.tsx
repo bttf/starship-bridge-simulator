@@ -1,11 +1,11 @@
 import * as React from 'react';
-import ViewScreen from './components/ViewScreen';
-import WarpIndicator from './components/WarpIndicator';
-import Information from './components/Information';
-import Destination from './components/Destination';
-import Communications from './components/Communications';
-import Panel from './components/Panel';
-import WarpSpeeds, { IWarpSpeed } from 'starbridge/lib/WarpSpeeds';
+import ViewScreen from 'components/ViewScreen';
+import WarpIndicator from 'components/WarpIndicator';
+import Information from 'components/Information';
+import Destination from 'components/Destination';
+import Communications from 'components/Communications';
+import Panel from 'components/Panel';
+import WarpSpeeds, { IWarpSpeed } from 'lib/WarpSpeeds';
 import './Simulator.scss';
 
 interface SimulatorState {

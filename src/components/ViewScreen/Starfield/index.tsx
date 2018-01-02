@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Starfield from './starfield';
-import { IWarpSpeed } from 'starbridge/lib/WarpSpeeds';
+import { IWarpSpeed } from 'lib/WarpSpeeds';
 import './styles.scss';
 
 interface StarfieldProps {

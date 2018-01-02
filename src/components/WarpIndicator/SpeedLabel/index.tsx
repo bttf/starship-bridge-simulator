@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { IWarpSpeed } from 'lib/WarpSpeeds';
 import './styles.scss';
-import { IWarpSpeed } from 'starbridge/lib/WarpSpeeds';
 
 interface SpeedLabelProps {
     key: number;
