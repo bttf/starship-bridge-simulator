@@ -2,6 +2,8 @@ import * as React from 'react';
 import ViewScreen from './components/ViewScreen';
 import WarpIndicator from './components/WarpIndicator';
 import Information from './components/Information';
+import Destination from './components/Destination';
+import Communications from './components/Communications';
 import Panel from './components/Panel';
 import WarpSpeeds, { IWarpSpeed } from 'starbridge/lib/WarpSpeeds';
 import './Simulator.scss';
@@ -51,13 +53,9 @@ export default class Simulator extends React.PureComponent<{}, SimulatorState> {
           setTargetWarpSpeed={this.setTargetWarpSpeed}
         />
 
-        <div className="destination">
-          <Panel title="Destination" />
-        </div>
+        <Destination />
 
-        <div className="communications">
-          <Panel title="Communications" />
-        </div>
+        <Communications />
 
         <Information />
       </div>
